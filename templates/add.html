@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Add Recipe</h2>
+    <h3>View recipes <a href="{{ url_for('list') }}">here</a></h3>
+    <form action="{{ url_for('add') }}" method=post>
+	<p class="heading">Title: <input type=text name=title>
+	<p class="heading">Author: <input type=text name=author>
+        <p class="heading">Recipe:
+	<textarea rows=5 cols=50 name=recipe></textarea></p>
+	<p><input type=submit value=Add></p>
+    </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>Recipe List</h3>
+    <h3>Add another recipe <a href="{{ url_for('add') }}">here</a></h3>
+    <hr>
+    {% for row in entries %}
+        <p>
+        <h3>Title: {{ row[0] }}</h3>
+        <h3>Author: {{ row[1] }}</h3>
+        <h3>Date: {{ row[2] }}</h3>
+        <h3>Recipe: {{ row[3] }}</h3>
+        <hr>
+        </p>
+    {% endfor %}
+{% endblock %}
